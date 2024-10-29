@@ -151,6 +151,9 @@
   <ItemGroup>
     <ResourceCompile Include="Resource.rc" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="bitcoin_logo_icon_170476.ico" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
