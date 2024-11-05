@@ -2,9 +2,9 @@ https://github.com/okovtun/PV_319_WIN.git
 https://www.youtube.com/playlist?list=PLeqyOOqxeiIOZckm7ngl9Cp5-lfhICVd7
 
 TODO:
-1. В Solution 'WinAPI' добавить проект 'ListBox', и в этом проекте выполнить
+1. В Solution 'WinAPI' добавить проект 'ListBox', и в этом проекте выполнить	DONE
    все те же дкйствия, что и в 'ComboBox';
-2. Добавить кнопку 'Добавить', которая позволяет добавить строку в ListBox;
+2. Добавить кнопку 'Добавить', которая позволяет добавить строку в ListBox;		DONE
 3. Добавить кнопку 'Удалить', которая удаляет выбранный элемент ListBox;
 4. При двойном щелчке по элементу ListBox его текст должен редактироваться;
 
