@@ -18,8 +18,9 @@ INT WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInst, LPSTR lpCmdLine, IN
 	wc.cbClsExtra = 0;
 	wc.cbWndExtra = 0;	//cb... - Count Bytes
 
-	wc.hIcon = LoadIcon(NULL, IDI_APPLICATION);
-	wc.hIconSm = LoadIcon(NULL, IDI_APPLICATION);
+	//wc.hIcon = LoadIcon(NULL, IDI_APPLICATION);
+	//wc.hIconSm = LoadIcon(NULL, IDI_APPLICATION);
+
 	wc.hCursor = LoadCursor(NULL, IDC_ARROW);
 	wc.hbrBackground = (HBRUSH)COLOR_WINDOW;
 
