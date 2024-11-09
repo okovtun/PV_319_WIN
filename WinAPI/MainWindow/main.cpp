@@ -2,6 +2,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<Windows.h>
 #include<cstdio>
+#include"resource.h"
 
 CONST CHAR g_sz_MY_WINDOW_CLASS[] = "My Window";	//Имя класса окна
 
@@ -18,10 +19,12 @@ INT WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInst, LPSTR lpCmdLine, IN
 	wc.cbClsExtra = 0;
 	wc.cbWndExtra = 0;	//cb... - Count Bytes
 
+	wc.hIcon = (HICON)LoadImage(hInstance, "bitcoin.ico", IMAGE_ICON, LR_DEFAULTSIZE, LR_DEFAULTSIZE, LR_LOADFROMFILE);
+	wc.hIconSm = (HICON)LoadImage(hInstance,"litecoin.ico",IMAGE_ICON,LR_DEFAULTSIZE,LR_DEFAULTSIZE,LR_LOADFROMFILE);
+
 	//wc.hIcon = LoadIcon(NULL, IDI_APPLICATION);
 	//wc.hIconSm = LoadIcon(NULL, IDI_APPLICATION);
-
-	wc.hCursor = LoadCursor(NULL, IDC_ARROW);
+	wc.hCursor = LoadCursor(hInstance, MAKEINTRESOURCE(IDC_CURSOR1));
 	wc.hbrBackground = (HBRUSH)COLOR_WINDOW;
 
 	wc.hInstance = hInstance;
@@ -96,7 +99,7 @@ INT CALLBACK WndProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 			"%s - Position: %ix%i;\tSize: %ix%i",
 			g_sz_MY_WINDOW_CLASS,
 			rect.left, rect.top,
-			window_width,window_height
+			window_width, window_height
 		);
 		//https://legacy.cplusplus.com/reference/cstdio/sprintf/
 		/*
