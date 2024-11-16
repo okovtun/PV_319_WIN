@@ -2,6 +2,10 @@ https://github.com/okovtun/PV_319_WIN.git
 https://www.youtube.com/playlist?list=PLeqyOOqxeiIOZckm7ngl9Cp5-lfhICVd7
 
 TODO:
+1. Цифры должны вводиться с клавиатуры;
+2. Реализовать вычисления;
+
+DONE:
 1. Загрузить значки через ресурсы, и функцию LoadIcon(), и проверить,
    появился ли значек у *.exe-файла.
 2. Загрузить анимированный курсор из игры StarCraft;
