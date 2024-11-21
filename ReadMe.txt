@@ -2,6 +2,9 @@ https://github.com/okovtun/PV_319_WIN.git
 https://www.youtube.com/playlist?list=PLeqyOOqxeiIOZckm7ngl9Cp5-lfhICVd7
 
 TODO:
+1. Применить значки для кнопок;
+
+DONE:
 1. Цифры должны вводиться с клавиатуры; DONE
 1. Операции должны вводиться с клавиатуры;
 2. Добить вычисления;
