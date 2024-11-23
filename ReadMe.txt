@@ -3,6 +3,7 @@ https://www.youtube.com/playlist?list=PLeqyOOqxeiIOZckm7ngl9Cp5-lfhICVd7
 
 TODO:
 1. Применить значки для кнопок;
+2. Использовать кастомный шрифт на экране калькулятора;
 
 DONE:
 1. Цифры должны вводиться с клавиатуры; DONE
