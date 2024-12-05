@@ -106,6 +106,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 	//////////////////////////////////////
 
 	static INT color_index = 0;
+	static HANDLE hMyFont = NULL;
 
 	//////////////////////////////////////
 
@@ -127,7 +128,17 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 			GetModuleHandle(NULL),
 			NULL
 		);
+		//////////////////		FONT	 /////////////////
 		AddFontResourceEx("Fonts\\Calculator.ttf", FR_PRIVATE, 0);
+		//////////////////////////////////////////////////
+		//https://stackoverflow.com/questions/58712918/win32-use-a-resource-font-inside-the-application
+		HINSTANCE hInstFont = LoadLibrary("..\\Debug\\FontOnlyDLL.dll");
+		HRSRC hFontRes = FindResource(hInstFont, MAKEINTRESOURCE(99), "BINARY");
+		HGLOBAL hFntMem = LoadResource(hInstFont, hFontRes);
+		VOID* fntData = LockResource(hFntMem);
+		DWORD nFonts = 0;
+		DWORD len = SizeofResource(hInstFont, hFontRes);
+		hMyFont = AddFontMemResourceEx(fntData, len, nullptr, &nFonts);
 		HFONT hFont = CreateFont
 		(
 			g_i_FONT_HEIGHT, g_i_FONT_WIDTH,
@@ -142,8 +153,13 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 			CLIP_TT_ALWAYS,
 			ANTIALIASED_QUALITY,
 			FF_DONTCARE,
-			"Calculator"
+			"Terminator Two"
+			//"Digital-7"
+			//"Calculator"
 		);
+		//MoveTo WM_DESTROY: RemoveFontMemResourceEx(hMyFont);
+		FreeLibrary(hInstFont);
+		//////////////////////////////////////////////////
 		SendMessage(hEdit, WM_SETFONT, (WPARAM)hFont, TRUE);
 
 		//TODO:	Button Icons.
@@ -513,6 +529,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 	////////////////////////////
 	case WM_DESTROY:
 	{
+		RemoveFontMemResourceEx(hMyFont);
 		HWND hEdit = GetDlgItem(hwnd, IDC_EDIT_DISPLAY);
 		HDC hdc = GetDC(hEdit);
 		ReleaseDC(hEdit, hdc);
