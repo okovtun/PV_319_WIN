@@ -2,6 +2,10 @@ https://github.com/okovtun/PV_319_WIN.git
 https://www.youtube.com/playlist?list=PLeqyOOqxeiIOZckm7ngl9Cp5-lfhICVd7
 
 TODO:
+1. Калькулятор должен запоминать выбранный скин, и загружать его при следующем запуске;
+2. В контекстном меню выбранный скин должен быть отмечен маркером;
+
+TODO:
 1. При нажатии ПКМ на окне Калькулятора должно появляться контекстное меню,
    в котором можно выбрать скин: Square blue или Metal mistral;	DONE
 2. Использовать кастомный шрифт на экране калькулятора;			DONE
@@ -12,8 +16,9 @@ TODO:
 7. Вынести Icon в DLL-файл;										DONE
 8. Вынести шрифт в DLL-файл;									DONE
 9. Обеспечить портативный запуск калькулятора: ucrtbased.dll, VCRUNTIME140D.dll;
-10. Калькулятор должен устанавливаться в систему как обычная программа;
+10. Калькулятор должен устанавливаться в систему как обычная программа;	DONE
 	TODO: Portable Calc release
+	https://learn.microsoft.com/en-us/cpp/windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project?view=msvc-170
 
 DONE:
 1. Применить значки для кнопок;		DONE
