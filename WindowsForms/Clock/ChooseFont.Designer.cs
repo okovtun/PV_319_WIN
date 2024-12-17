@@ -121,6 +121,7 @@
 			this.Controls.Add(this.labelChooseFont);
 			this.Controls.Add(this.nudFontSize);
 			this.Controls.Add(this.cbFonts);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "ChooseFontForm";
 			this.Text = "ChooseFont";

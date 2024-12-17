@@ -2,10 +2,14 @@ https://github.com/okovtun/PV_319_WIN.git
 https://www.youtube.com/playlist?list=PLeqyOOqxeiIOZckm7ngl9Cp5-lfhICVd7
 
 TODO:
+1. В контекстное меню добавить пункт 'Choose font', который будет открывать соответствующее диалоговое окно;
+2. При запуске диалогового окна в выпадающий список должны загружаться все шрифты из папки 'Fonts':
+	https://github.com/okovtun/PV_319_WIN/tree/master/WindowsForms/Clock/Fonts
+
+TODO:
 0. Отобразить ShowControls в контекстном меню;								DONE
 1. Обеспечить возможность выбирать цвет шрифта и цвет фона для 'labelTime';	DONE
 2. Прикрутить кастомный шрифт к 'labelTime';
-
 
 DONE:
 1. При двойном щелчке мышью, элементы управления окном должны снова быть видимыми; 
