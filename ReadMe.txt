@@ -2,6 +2,10 @@ https://github.com/okovtun/PV_319_WIN.git
 https://www.youtube.com/playlist?list=PLeqyOOqxeiIOZckm7ngl9Cp5-lfhICVd7
 
 TODO:
+1. Обеспечить возможность выбирать цвет шрифта и цвет фона для 'labelTime';
+2. Прикрутить кастомный шрифт к 'labelTime';
+
+DONE:
 1. При двойном щелчке мышью, элементы управления окном должны снова быть видимыми; 
 2. Создать репозиторий, и залить его на GitHub;
 
@@ -20,6 +24,7 @@ TODO:
 6. При смене темы должен меняться так же цвет шрифта, экрана и главного окна;	DONE
 7. Вынести Icon в DLL-файл;										DONE
 8. Вынести шрифт в DLL-файл;									DONE
+	https://stackoverflow.com/questions/58712918/win32-use-a-resource-font-inside-the-application
 9. Обеспечить портативный запуск калькулятора: ucrtbased.dll, VCRUNTIME140D.dll;
 10. Калькулятор должен устанавливаться в систему как обычная программа;	DONE
 	TODO: Portable Calc release
