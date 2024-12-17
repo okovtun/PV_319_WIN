@@ -2,8 +2,10 @@ https://github.com/okovtun/PV_319_WIN.git
 https://www.youtube.com/playlist?list=PLeqyOOqxeiIOZckm7ngl9Cp5-lfhICVd7
 
 TODO:
-1. Обеспечить возможность выбирать цвет шрифта и цвет фона для 'labelTime';
+0. Отобразить ShowControls в контекстном меню;								DONE
+1. Обеспечить возможность выбирать цвет шрифта и цвет фона для 'labelTime';	DONE
 2. Прикрутить кастомный шрифт к 'labelTime';
+
 
 DONE:
 1. При двойном щелчке мышью, элементы управления окном должны снова быть видимыми; 
