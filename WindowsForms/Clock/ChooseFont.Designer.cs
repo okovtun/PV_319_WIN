@@ -47,6 +47,7 @@
 			this.cbFonts.Name = "cbFonts";
 			this.cbFonts.Size = new System.Drawing.Size(330, 21);
 			this.cbFonts.TabIndex = 0;
+			this.cbFonts.SelectedIndexChanged += new System.EventHandler(this.cbFonts_SelectedIndexChanged);
 			// 
 			// nudFontSize
 			// 
@@ -98,6 +99,7 @@
 			this.btnOK.TabIndex = 5;
 			this.btnOK.Text = "OK";
 			this.btnOK.UseVisualStyleBackColor = true;
+			this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
 			// 
 			// btnCancel
 			// 
