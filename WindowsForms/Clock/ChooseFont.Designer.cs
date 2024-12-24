@@ -148,6 +148,7 @@
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "ChooseFontForm";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
 			this.Text = "ChooseFont";
 			((System.ComponentModel.ISupportInitialize)(this.nudFontSize)).EndInit();
 			this.ResumeLayout(false);
