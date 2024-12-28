@@ -25,7 +25,11 @@ namespace Clock
 		{
 			addAlarm.StartPosition = FormStartPosition.Manual;
 			addAlarm.Location = new Point(this.Location.X + 25, this.Location.Y + 25);
-			addAlarm.ShowDialog();
+			DialogResult result = addAlarm.ShowDialog();
+			if (result == DialogResult.OK)
+			{
+				lbAlarms.Items.Add(addAlarm.Alarm);
+			}
 		}
 	}
 }
