@@ -14,6 +14,14 @@ namespace Clock
 	{
 		AddAlarmForm addAlarm = null;
 		OpenFileDialog openFile = null;
+		public ListBox LB_Alarms
+		{
+			get => lbAlarms;
+			//get
+			//{
+			//	return lbAlarms;
+			//}
+		}
 		public AlarmsForm()
 		{
 			InitializeComponent();

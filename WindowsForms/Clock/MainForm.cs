@@ -18,6 +18,7 @@ namespace Clock
 	{
 		ChooseFontForm fontDialog = null;
 		AlarmsForm alarms = null;
+		Alarm nextAlarm = null;
 		public MainForm()
 		{
 			InitializeComponent();
@@ -31,6 +32,21 @@ namespace Clock
 			LoadSettings();
 			//fontDialog = new ChooseFontForm();
 			alarms = new AlarmsForm();
+			Console.WriteLine(DateTime.MinValue);
+			CompareAlarmsDEBUG();
+		}
+		void CompareAlarmsDEBUG()
+		{
+			Alarm alarm1 = new Alarm();
+			Alarm alarm2 = new Alarm();
+
+			alarm1.Date = new DateTime(2025, 01, 16);
+			alarm1.Time = new TimeSpan(9, 5, 0);
+
+			alarm2.Date = new DateTime(1, 01, 1);
+			alarm2.Time = new TimeSpan(9, 11, 00);
+
+			//Console.WriteLine(alarm1 < alarm2);
 		}
 		void SetVisibility(bool visible)
 		{
@@ -94,6 +110,9 @@ namespace Clock
 				labelTime.Text += DateTime.Now.DayOfWeek;
 			}
 			notifyIcon.Text = labelTime.Text;
+
+			if (alarms.LB_Alarms.Items.Count > 0) nextAlarm = alarms.LB_Alarms.Items.Cast<Alarm>().ToArray().Min();
+			if (nextAlarm != null) Console.WriteLine(nextAlarm);
 		}
 
 		private void btnHideControls_Click(object sender, EventArgs e)
@@ -184,11 +203,11 @@ namespace Clock
 			}
 			if (dialog.ShowDialog() == DialogResult.OK)
 			{
-				switch ((sender as ToolStripMenuItem).Text)	//as - это оператор преобразования типа
-					//Оператор 'as' значение слева приводит к типу справа
+				switch ((sender as ToolStripMenuItem).Text) //as - это оператор преобразования типа
+															//Оператор 'as' значение слева приводит к типу справа
 				{
-					case "Background color":labelTime.BackColor = dialog.Color; break;
-					case "Foreground color":labelTime.ForeColor = dialog.Color; break;
+					case "Background color": labelTime.BackColor = dialog.Color; break;
+					case "Foreground color": labelTime.ForeColor = dialog.Color; break;
 				}
 			}
 		}
