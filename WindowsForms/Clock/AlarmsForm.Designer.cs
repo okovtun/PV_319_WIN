@@ -44,6 +44,7 @@
 			this.lbAlarms.Name = "lbAlarms";
 			this.lbAlarms.Size = new System.Drawing.Size(431, 264);
 			this.lbAlarms.TabIndex = 0;
+			this.lbAlarms.DoubleClick += new System.EventHandler(this.lbAlarms_DoubleClick);
 			// 
 			// btnOK
 			// 
