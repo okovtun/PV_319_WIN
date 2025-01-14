@@ -34,6 +34,7 @@ namespace Clock
 			alarms = new AlarmsForm();
 			Console.WriteLine(DateTime.MinValue);
 			//CompareAlarmsDEBUG();
+			axWindowsMediaPlayer.Visible = false;
 		}
 		void CompareAlarmsDEBUG()
 		{
@@ -95,6 +96,13 @@ namespace Clock
 			Alarm[] actualAlarms = alarms.LB_Alarms.Items.Cast<Alarm>().Where(a => a.Time > DateTime.Now.TimeOfDay).ToArray();
 			return actualAlarms.Min();
 		}
+		void PlayAlarm()
+		{
+			axWindowsMediaPlayer.URL = nextAlarm.Filename;
+			axWindowsMediaPlayer.settings.volume = 100;
+			axWindowsMediaPlayer.Ctlcontrols.play();
+			axWindowsMediaPlayer.Visible = true;
+		}
 
 		private void timer_Tick(object sender, EventArgs e)
 		{
@@ -124,7 +132,8 @@ namespace Clock
 				)
 			{
 				System.Threading.Thread.Sleep(1000);
-				MessageBox.Show(this, nextAlarm.ToString(), "Alarm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				PlayAlarm();
+				//MessageBox.Show(this, nextAlarm.ToString(), "Alarm", MessageBoxButtons.OK, MessageBoxIcon.Information);
 				nextAlarm = null;
 			}
 
